@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            background: linear-gradient(45deg, red, rgb(66, 66, 199), white);
+            /* background-image: linear-gradient(to right, red , yellow); */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .main{
+            background-image: linear-gradient(to right, rgb(181, 49, 49) , rgb(190, 190, 19));
+            display: flex;
+            width: 90%;
+            height: 50vh;
+            padding: 20px;
+            border-radius: 3px 3px 3px 3px;
+            box-shadow: 3px 3px 3px 3px black;
+            justify-content: space-between;
+        }
+        .left  {
+            width: 35%;
+        }
+        .right{
+            width: 60%;
+            
+        }
+        .right img{
+            width: 0%;
+            /* position: relative; */
+            margin-left: 150px;
+            margin-top: -60px;
+        }
+        #img{
+            width: 360px;
+        }
+        #img:hover{
+            width: 80%;
+            margin-left: 35px;
+        }
+        #h1{
+            color: white;
+        }
+        #p{
+            color: white;
+        }
+        .right img {
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="left">
+                <h1 id="h1">Shoe-1</h1><br>
+                <p id="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet at, blanditiis saepe adipisci molestiae neque quisquam perferendis, repudiandae repellendus odio a repellat minus iste sapiente molestias nulla nam, quas perspiciatis! <br><br>
+
+                Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dolore.</p>
+            </div>
+            <div class="right">
+                <img id="img" src="https://priyanshu-240499.github.io/Assignments-CSS/position/assets/shoe-1.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
