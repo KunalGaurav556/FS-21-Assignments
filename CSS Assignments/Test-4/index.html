@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+        .nav{
+            width: 100%;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+            padding: 9px;
+            background-color: rgb(31, 29, 29);
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: fixed;
+        }
+        .nav-mid{
+            display: flex;
+            /* border: 2px solid yellow; */
+            width: 80%;
+        }
+        .left{
+            /* border: 2px solid black; */
+            width: 40%;
+        }
+        .right{
+            width: 55%;
+            display: flex;
+        }
+        .right ul{
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .bg{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(img/family-camping-at-sunset.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            color: rgb(255, 255, 255);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* background-color: rgb(34, 32, 32); */
+            background-attachment: fixed;    
+        }
+        .box{
+            width: 80%;
+            /* border: 2px solid black; */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+           background-color: rgba(159, 159, 159, 0);
+        }
+        #h1{
+            font-weight: bolder;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+        .anchor-tag{
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }   
+        .anchor-tag a{
+            text-decoration: none;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .anchor-tag a:hover{
+           /* opacity: 0.7; */
+           color: white;
+           background-color: rgba(0, 0, 0, 0);
+           border: 1px solid white;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(249, 247, 247, 0.659);
+        }
+        .main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+            flex-direction: column;
+        }
+        .cards-1{
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: space-around; */
+            margin-bottom:15px;
+            
+        }
+        .card{
+            width: 17.5rem;
+            height: 17rem;
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2.5rem;
+            margin: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+            background: #fff;
+            box-shadow: 1px 1px 1px 1px rgb(228, 226, 226);
+        }
+        .c-image img{
+            width:5rem ;
+            height: 5rem;
+            border-radius: 45px;
+        }
+        .cards-2{
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:15px;
+            /* justify-content: space-around; */
+        }
+        .our{
+            text-align: center;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        .para{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .about{
+            /* border: 2px solid red; */
+            width: 83%;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 15px;
+        }
+        .about-haeding{
+            text-align: center;
+        }
+        .story{
+            width: 100%;
+            /* border: 2px solid blue; */
+            padding: 3rem;
+        }
+        .our-story{
+            /* border: 2px solid green; */
+            margin-bottom: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 15px;
+        }
+        .our-story ul{
+            margin-left: 1rem;
+        }
+        .form{
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+        }
+        .address{
+            display: flex;
+            padding: 1rem;
+            margin-bottom: 5rem;
+        }
+        .l{
+            width: 49%;
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        .r{
+            width: 49%;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+        .Contact-Us{
+            text-align: center;
+            padding: 2rem;
+            font-size: 14px;
+        }
+        .m-icons{
+           display: flex;
+           /* padding: 3px; */
+            margin-top: 5px;
+        }
+        .m-icons span{
+            margin-left: 10px;
+        } 
+        .name{
+            /* border: 2px solid yellow; */
+
+            width: 85%;
+        }
+        .name input{
+            width: 100%;
+            padding: 6px;
+            margin-top: 1rem;
+        }
+        .name textarea{
+            width: 100%;
+            padding: 6px;
+            margin-top: 1rem;
+        }
+        .submit-btn{
+            /* text-align: start; */
+            /* border: 2px solid blue; */
+            width: 85%;
+        }
+        .submit{
+            padding: 8px;
+            width: 130px;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 1rem;
+            border: none;
+            background-color: rgb(24, 24, 24);
+            color: white;
+        }
+        .submit:hover{
+            background-color: rgb(55, 54, 54);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-mid">
+            <div class="left">
+                <h1>LOGO</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Portfolio</li>
+                    <li>About us</li>
+                    <li>Contact US</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg">
+        <div class="box">
+            <h1 id="h1">Camping Gear and Essentials</h1>
+            <p>Discover top-quality camping gear for unforgettable outdoor adventures. <br>
+                Gear up and make lasting memories.</p>
+            <div class="anchor-tag">
+                <a href="">OUR SERVICES</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main">
+           <div class="our">
+            <h1>Our Services</h1>
+            <span>Explore our wide range of camping gear services.</span>
+           </div>
+           <div class="cards-1">
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Tents</h3>
+                </div>
+                <div class="para">
+                    <p>Experience comfort and protection with our high-quality camping tents.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Sleeping Bags</h3>
+                </div>
+                <div class="para">
+                    <p>Stay cozy and warm during your camping trips with our premium sleeping bags.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Camp Stoves</h3>
+                </div>
+                <div class="para">
+                    <p>Cook delicious meals in the great outdoors with our reliable camp stoves.</p>
+                </div>
+            </div>
+           </div>
+           <div class="cards-2">
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Backpacks</h3>
+                </div>
+                <div class="para">
+                    <p>Carry your essentials comfortably with our durable and functional camping backpacks.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Camp Chairs</h3>
+                </div>
+                <div class="para">
+                    <p>Relax and unwind in style with our comfortable and portable camping chairs.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="c-image">
+                    <img src="img/image.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>Camp Lights</h3>
+                </div>
+                <div class="para">
+                    <p>Illuminate your campsite with our reliable and energy-efficient camping lights.</p>
+                </div>
+            </div>
+           </div>
+    
+        </div>
+
+        <div class="about">
+            <div class="about-haeding">
+                <h1>About Us</h1>
+                <span>Discover our story in providing camping services.</span>
+            </div>
+
+            <div class="story">
+                <div class="our-story">
+                    <h4>Our Story</h4>
+                    <p>Experience the excellence of our camping gear and services, where we have been offering high-quality camping essentials and gear for outdoor enthusiasts for over a decade. Our commitment to quality and customer satisfaction ensures that every adventurer can rely on us for their camping needs</p>
+                </div>
+
+                <div class="our-story">
+                    <h4>Our Mission</h4>
+                    <p>At Camping Gear Experts, our mission is to equip outdoor enthusiasts with top-notch camping gear and essentials that enhance their outdoor experiences. We strive to provide reliable, durable, and innovative products that contribute to memorable adventures and lasting memories.</p>
+                </div>
+
+                <div class="our-story">
+                    <h4>Our Vision</h4>
+                    <p>Our vision is to become the go-to destination for camping enthusiasts, known for our extensive selection of premium camping gear and exceptional customer service. We aspire to inspire and enable people to embrace the beauty of nature and create unforgettable camping experiences.</p>
+                </div>
+
+                <div class="our-story">
+                    <h4>Our Team</h4>
+                    <ul>
+                        <li>John Doe - Founder and CEO</li>
+                        <li>Jane Smith - Gear Specialist</li>
+                        <li>Mark Johnson - Customer Representative
+                        </li>
+                        <li>Sarah Brown - Operations Manager</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="Contact-Us">
+                <h1>Contact Us</h1>
+                <span>Reach out to us for any inquiries or feedback.</span>
+            </div>
+            <div class="address">
+                <div class="l">
+                   <div class="m-icons">
+                    <i class="material-icons">location_on</i>
+                    <span class="material-icons-outlined"> 123 Campsite Avenue, Wilderness, CA 98765</span>
+                   </div>
+
+                   <div class="m-icons">
+                    <i class="material-icons">email</i>
+                    <span class="material-icons-outlined"> info@campinggearexperts.com</span>
+                   </div>
+
+                   <div class="m-icons">
+                    <i class="material-icons">phone</i>
+                    <span class="material-icons-outlined">Monday - Friday: 9:00 AM - 5:00 PM</span>
+                   </div>
+
+                  
+                   <div class="m-icons">
+                    <i class="material-icons">watch_later</i>
+                    <span class="material-icons-outlined">Monday - Friday: 9:00 AM - 5:00 PM</span>
+                   </div>
+
+                   <div class="m-icons">
+                    <i class="material-icons">watch_later</i>
+                    <span class="material-icons-outlined"> Saturday: 10:00 AM - 3:00 PM</span>
+                   </div>
+
+                   <div class="m-icons">
+                    <i class="material-icons">watch_later</i>
+                    <span class="material-icons-outlined"> Sunday: Closed</span>
+                   </div>
+
+                   <div class="m-icons">
+                    <i class="material-icons">language</i>
+                    <span class="material-icons-outlined"> www.codingnepalweb.com</span>
+                   </div>
+                </div>
+                <div class="r">
+                   <div class="name">
+                    <label for="name"></label>
+                    <input type="text" name="" id="" placeholder="Name*">
+                   </div>
+                   <div class="name">
+                    <label for="email"></label>
+                    <input type="text" name="" id="" placeholder="Email*">
+                   </div>
+                   <div class="name">
+                    <label for="textarea"></label>
+                    <textarea name="Message" cols="40" rows="10" id="" placeholder="Message*"></textarea>
+                   </div>
+                   <div class="submit-btn">
+                    <button class="submit">Send Message</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
