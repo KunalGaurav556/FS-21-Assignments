@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: beige;
+            /* height: 100vh; */
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px; */
+            grid-template-columns: repeat(3,100px);
+            grid-template-rows: 100px 100px 100px;
+        }
+        .child{
+            background-color: orange;
+            border: 2px solid black;
+            margin: 5px;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child" id="id1">id1</div>
+        <div class="child" id="id2">id2</div>
+        <div class="child" id="id3">id3</div>
+        <div class="child" id="id4">id4</div>
+        <div class="child" id="id5">id5</div>
+        <div class="child" id="id6">id6</div>
+    </div>
+</body>
+</html>

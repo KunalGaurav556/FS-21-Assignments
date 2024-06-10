@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+
+      <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        .material-icons{
+            color: rgb(97, 97, 97);
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70x;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #yt{
+            width:34px ;
+        }
+        .header img{
+            width: 50px;
+        }
+        .hearder-left{
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .hearder-left img{
+            width: 50px;
+            margin-left: 10px;
+        }
+        .hearder-left i{
+            cursor: pointer;
+        }
+        .hearder-search{
+            display: flex;
+
+        }
+        .hearder-search form{
+            /* border: 1px solid gray; */
+            display: flex;
+            margin: 0;
+            padding: 0;
+
+        }
+        .hearder-search input{
+           width: 300px;
+           border-radius:14px;
+           padding-left: 10px;
+           height: 100%;
+        }
+        .hearder-search button{
+            margin-left: 10px;
+            
+        }
+        .main{
+            display: flex;
+            cursor: pointer;
+        }
+        .sidebar{
+            width: 230px;
+            height: 100vh;
+            background-color: rgb(247, 247, 247);
+            overflow: scroll;
+        }
+        .sidebar-categories{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            /* border: 2px solid red; */
+        }
+        .sidebar-category{
+            display: flex;
+            align-items: center;
+            margin: 12px;
+        }
+        .sidebar-category:hover{
+            background-color: rgb(64, 64, 64);
+            color: white;
+            border-radius: 5px  ;
+
+        }
+        .sidebar-category span{
+            margin-left: 15px;
+            font-weight: 600;
+
+        }
+        .videos{
+            padding: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 100%;
+            width: 100%;
+            border-top:0.1px solid black ;
+            font-size: 15px;
+            font-weight: 100;
+        }
+        .video-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .video{
+            width:300px ;
+            margin-bottom: 30px;
+           
+        }
+        .video a{
+            text-decoration: none;
+        }
+        .video-thumbnail{
+            /* display: flex; */
+            width:100%;
+            height: 150px;
+        }
+        .video-author img{
+            width: 50px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .video-details{
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .video-title{
+            display: flex;
+            flex-direction: column;
+            /* margin: 3px; */
+            padding: 5px;
+        }
+        #rec{
+            font-size: 23px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 6px;
+        }
+      </style>
+</head>
+<body>
+    <div class="header">
+        <div class="hearder-left">
+            <i class="material-icons">menu</i>  
+        <img id="yt" src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" alt="you-tube image">
+        </div>   
+
+        <div class="hearder-search">
+             <form action="">
+                <input type="text" placeholder="search">
+                <button><i class="material-icons">search</i></button>
+            </form>
+        </div>    
+          
+        <div class="hearder_icons">
+            <i class="material-icons">videocam</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <i class="material-icons">account_circle</i>
+        </div>     
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar-categories">
+                <div class="sidebar-category"> 
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </div>
+                <div class="sidebar-category">
+                    <i class="material-icons">local_fire_department</i>
+                    <span>Trending</span>
+                </div>
+                <div class="sidebar-category">
+                    <i class="material-icons">subscriptions</i>
+                    <span>subscriptions</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sidebar-categories">
+                <div class="sidebar-category"> 
+                    <i class="material-icons">library_add_check</i>
+                    <span>Library</span>
+                </div>
+                <div class="sidebar-category">
+                    <i class="material-icons">play_arrow</i>
+                    <span>Your Videos</span>
+                </div>
+                <div class="sidebar-category">
+                    <i class="material-icons">watch_later</i>
+                    <span>Watch Later</span>
+                </div>
+                <div class="sidebar-category">
+                    <i class="material-icons">thumb_up</i>
+                    <span>Liked Videos</span>
+                </div>
+            </div><hr>
+
+        </div>
+
+        <div class="videos">
+            <h1 id="rec">Recomended</h1>
+            <div class="video-container">
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt="">
+                        </div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt="">
+                        </div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt="">
+                        </div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt="">
+                        </div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt=""></div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt=""></div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt=""></div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt=""></div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hN28VhVYenw0Og7z1j95n6hQDYw6lMriBA&s" alt="">
+                    </div>
+                    <div class="video-details">
+                        <div class="video-author">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHWsYLldiypHPqXmr2VRWmVrsYARQLERBnA&s" alt=""></div>
+                        <div class="video-title">
+                            <h3>dummy text as a title</h3>
+                            <a href="">dummy link </a>
+                            <span>10M views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
