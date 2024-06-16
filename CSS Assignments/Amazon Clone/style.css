@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans", sans-serif;
+}
+.navbar{
+    /* border: 2px solid blue; */
+    display: flex;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-main{
+    /* border: 2px solid yellow; */
+    display: flex;
+    width: 97%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    width: 25%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+#deliver{
+    color: rgb(159, 157, 157);
+}
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.amazon-logo img{
+    width: 7.4rem ;
+}
+.location{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.search-bar{
+    display: flex;
+    /* border: 2px solid yellow; */
+    width: 45%;
+
+
+    .options{
+        background: #f3f3f3;
+        width: 40px;
+        text-align: center;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border: none;
+        display: flex;
+    }
+    .input-search{
+        width: 100%;
+        /* border: 2px solid green; */
+    }
+    .input{
+        width: 100%;
+        /* border: 2px solid blue; */
+        height: 100%;
+        padding: 5px;
+    }
+    .search-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* margin-top: 5px; */
+        
+    }
+    .material-icons{
+        color: black;
+        background-color: rgb(251, 195, 84);
+        height: 100%;
+        padding: 3.5px;
+        border-radius: 0 5px 5px 0;
+        margin-right: 1px;
+        border: none;
+    }  
+}
+
+.nav-cart{
+        width:30% ;
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: space-around;
+        
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        a:hover{
+            color: rgb(159, 157, 157);
+            transition: 0.3s color;
+        }
+    }
+ .sec-nav{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222f3d;
+    color:#ffffff ;
+    font-size: 14px;
+ }
+ .main-sec-nav{
+    /* border:2px solid blue; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+ }
+ .sec-nav-left{
+    width:50%;
+ }
+ .sec-nav-left ul{
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .sec-nav-left ul li:hover{
+    color: rgb(187, 187, 187);
+ }
+ .sec-nav-right{
+    /* border: 2px solid red; */
+    width: 50%;
+    text-align: end;
+ }
+ .sec-nav-right:hover{
+    color: rgb(187, 187, 187);
+ }
+ .prime-image{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 400px;
+    background-image: url("Assets/hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+ }
+ .main-card{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    
+ }
+ .cards{
+    border: 2px soid black;
+    display: flex;
+    width: 90%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+ }
+ .card {
+    /* border: 2px solid green; */
+    padding: 1.7rem;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out; /* Apply transition here */
+    overflow: hidden;
+    img {
+        width: 12rem;
+        height: 14rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.card:hover {
+    transform: scale(1.1);
+    a{
+        color: orangered;
+        text-decoration: underline;
+    }
+}
+.trans{
+    overflow: hidden;
+    /* transform: scale(1.1); */
+}
+.back{
+    width: 100%;
+    text-align: center;
+    padding: 1.1rem;
+    background-color: #37475a;
+    cursor: pointer;
+    a{
+        color: #ffffff;
+        text-decoration: none;
+        /* border: 2px solid red; */
+        font-size: 14px;
+    }
+    a:hover{
+        color: rgb(187, 187, 187);
+    }
+}
+.footer{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #232f3e;
+}
+.f-main{
+    width: 90%;
+    /* border: 2px solid blue; */
+    display: flex;
+    height: 290px;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+.f-card{
+    /* margin-top: 2.5rem; */
+    margin: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    a{
+        text-decoration: none;
+        padding: 2px;
+        text-align: start;
+        font-size: 14px;
+        color: #dddddd;
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+}
+.f-span{
+    margin-bottom: 5px;
+    color: #dddddd;
+}
+ 
