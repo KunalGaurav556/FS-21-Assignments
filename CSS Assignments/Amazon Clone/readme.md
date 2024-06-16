@@ -3,7 +3,7 @@
 ```
 This is the amazon ui clone project that is created by the technologies HTML CSS.
 ```
-[📌 Hosted Link](./)
+[📌 Hosted Link](https://kunalgaurav556.github.io/FS-21-Assignments/CSS%20Assignments/Amazon%20Clone/index.html)
 
 [📌 HTML Code](./index.html)
 
