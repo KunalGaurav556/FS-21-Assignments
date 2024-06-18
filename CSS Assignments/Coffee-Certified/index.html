@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .main {
+            /* border: 2px solid blue; */
+            width: 60%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 28);
+            padding: 20px;
+            position: relative; 
+            overflow: hidden;
+             
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 25%;
+            background-color: white;
+            z-index: 1; 
+        }
+
+        .left {
+            padding: 2rem;
+            width: 50%;
+            z-index: 2; 
+        }
+
+        .left img {
+            width: 100%;
+        }
+
+        .right {
+            width: 50%;
+            text-align: center;
+            padding: 2rem;
+            z-index: 2; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #span{
+                font-size:17px ;
+                margin-top: 10px;
+            }
+            #btn{
+                width: 40%;
+                padding: 0.4rem;
+                background-color: black;
+                color: white;
+                margin-top: 1rem;
+            }
+            
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                height: 110vh;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .right {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .right h1 {
+                font-size: 1.5rem;
+            }
+
+            .right p {
+                font-size: 0.9rem;
+            }
+
+            .right button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="left">
+                <img src="img/Screenshot 2024-06-18 170952.png">
+            </div>
+            <div class="right">
+                <h1>Certified Coffee <br> Courses</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita repellat fugiat vitae sit
+                    molestiae illum ipsam quis culpa iste? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, culpa.</p>
+                <span id="span">Image from Freepik</span>
+                <button id="btn">LEARN MORE</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
