@@ -1,0 +1,116 @@
+@keyframes car-card-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+#car-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    animation: car-card-fadeIn 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#car-card-image {
+    width: 100%;
+    height: auto;
+}
+
+#car-card-container {
+    padding: 16px;
+}
+
+#car-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#car-card-olx-logo {
+    background: url('olx-logo.png') no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+#car-card-featured {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#car-card-heart {
+    background: url('heart-icon.png') no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+#car-card-price {
+    margin: 0;
+    color: #333;
+}
+
+#car-card-details {
+    color: #777;
+    margin: 8px 0;
+}
+
+#car-card-model {
+    color: #d32f2f;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#car-card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#car-card-info div {
+    color: #777;
+    font-size: 0.9em;
+}
+
+#car-card-document {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+#car-card-document-icon {
+    background: url('document-icon.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#car-card-document-text {
+    color: #777;
+    font-size: 0.9em;
+}
