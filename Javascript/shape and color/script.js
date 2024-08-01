@@ -7,6 +7,7 @@ btn[0].addEventListener("click", changeColor)
 function generateColor(){
     let color = Math.floor(Math.random() * 255);
     return color;
+    // console.log(color);
 }
 
 function changeColor(){
@@ -25,5 +26,5 @@ function randomShape(){
 
 function changeShape(){
     let idname = randomShape();
-    shape.id = idname;
+    shape.id = idname; 
 }
