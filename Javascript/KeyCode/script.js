@@ -11,5 +11,5 @@ document.addEventListener("keydown",function(e){
     console.log(keyCode);
 
     keyy.innerHTML = `You Have Clicked : ${key}`;
-    code.innerHTML = `Code Code of ${key} is ${keyCode} `;
+    code.innerHTML = `Your keyCode of ${key} is ${keyCode} `;
 })
