@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            /* border: 2px solid red; */
+            height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+
+        .left {
+            /* border: 2px solid green; */
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: skyblue;
+
+            h1 {
+                margin-bottom: 2rem;
+                margin-top: 4rem;
+            }
+
+            button {
+                padding: 0.7rem;
+                border-radius: 20px;
+                margin-top: 2rem;
+                background-color: pink;
+                width: 9rem;
+                
+            }
+        }
+
+        .right {
+            /* border: 2px solid blue; */
+            width: 50%;
+            display: inline-block;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            /* align-items: center; */
+            text-align: center;
+            background-color: rgb(79, 131, 79);
+        }
+
+        #container {
+            /* border: 2px solid red; */
+            width: 98%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                /* border: 2px solid yellow; */
+                border-radius: 10px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                padding: 0.8rem;
+                /* align-items: center; */
+                justify-content: space-between;
+
+                button {
+                    /* border: 2px solid red; */
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+        #h{
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <h1>Sticky Notes</h1>
+            <form action="">
+                <textarea name="" id="text" cols="50" rows="10"></textarea>
+                <input type="color" id="color">
+            </form>
+
+            <button id="button">Addn notes</button>
+        </div>
+
+
+        <div class="right">
+            <h1 id="h" style="color: whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Your Notes</h1>
+            <div id="container">
+                <p id="q"
+                    style="color:rgb(255, 251, 2); font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    There is no Any notes here</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let btn = document.getElementById("button");
+        let color = document.getElementById("color");
+        let text = document.getElementById("text");
+        let container = document.getElementById("container");
+        let q = document.getElementById("q");
+
+        btn.addEventListener("click", function () {
+            console.log("clicked");
+            let div = document.createElement("div");
+            let crs = document.createElement("button");
+            let p = document.createElement("p");
+
+            crs.innerHTML = "X";
+
+            if (text.value === "") {
+                div.style.display = "none";
+            }
+            if (text.value === "") {
+                alert("Add some notes below");
+            }
+            div.appendChild(p);
+            div.appendChild(crs);
+
+            p.innerHTML = text.value;
+            console.log(div);
+            div.style.backgroundColor = color.value;
+            p.style.color = "white";
+            div.style.width = "150px";
+            div.style.height = "150px";
+            container.appendChild(div);
+            text.value = "";
+
+            crs.addEventListener("click", function () {
+                div.style.display = "none";
+            })
+
+            q.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>

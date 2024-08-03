@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            width: 99%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: pink;
+            padding: 5rem;
+            width: 50%;
+            color: blue;
+            border-radius: 30px;
+        }
+        #button{
+            padding:  1rem;
+            border-radius: 10px;
+        }
+        #container{
+            padding: 1rem;
+            color: red;
+            font-size: 20px;
+        }
+        #input{
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+
+<body>
+  <div class="main">
+    <h1>Random Password Genetor</h1>
+    <div id="container">
+        <form action="">
+            <input type="text" id="input">
+        </form>
+    </div>
+    <button id="button">Genetrate</button>
+  </div>
+
+
+    <script>
+        let btn = document.getElementById("button");
+        let container = document.getElementById("container")
+        let input = document.getElementById("input")
+
+        function random() {
+            let randomPass = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+            let pass = "";
+            for (let i = 0; i < 35; i++) {
+                let ranindex = Math.floor(Math.random() * randomPass.length);
+                pass += randomPass[ranindex];
+            }
+            return pass;
+        }
+
+        btn.addEventListener("click", function () {
+            console.log(random());
+            input.value = random();
+        });
+    </script>
+</body>
+
+</html>
