@@ -1,4 +1,5 @@
 let main = document.getElementById("main");
+let btn = document.getElementById("btn");
 
 for (let i = 0; i < 100; i++) {
     // let div = document.createElement("div");
@@ -38,3 +39,5 @@ function generateColor() {
 
 
 window.addEventListener("load", generateColor);
+btn.addEventListener("click",generateColor)
+
