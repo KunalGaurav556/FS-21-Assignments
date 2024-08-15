@@ -14,8 +14,7 @@ function randomColor() {
     let color = "#";
     for (let i = 0; i < 6; i++) {
         let randColr = Math.floor(Math.random() * number.length);
-        color = color + number[randColr];
-        
+        color = color + number[randColr];     
     }
     return color
     // console.log(color)
