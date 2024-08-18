@@ -7,6 +7,7 @@ for (let i = 0; i < 100; i++) {
     // main.appendChild(div);
     main.innerHTML += div;
 }
+
 // console.log(main);
 
 function randomColor() {
