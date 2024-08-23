@@ -57,9 +57,8 @@ filterBtn.addEventListener("click", function(card){
             card.style.display = "none";
         }
         console.log(cardType);
-    })
-
-
+    }) 
+    
 })
 
 
