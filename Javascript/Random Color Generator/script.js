@@ -41,3 +41,4 @@ function generateColor() {
 window.addEventListener("load", generateColor);
 btn.addEventListener("click",generateColor)
 
+ 
