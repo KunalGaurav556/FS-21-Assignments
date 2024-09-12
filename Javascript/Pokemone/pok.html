@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>pokemon_card_container</h1>
+    <div id="pok">
+      <p></p>
+    </div>
+
+
+    <script>
+      let pok = document.getElementById("pok");
+      
+      async function fetchdata(){
+        let response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+        let data =await response.json();
+        console.log(data);
+        // return data;
+
+        data.results.forEach(pokemone => {
+         console.log(pokemone);
+         
+         let div = document.createElement("div");
+         div.innerHTML = `
+         <p>${pokemone.name}</p>
+         `
+          pok.appendChild(div);
+          
+        });
+
+
+
+      }
+      fetchdata();
+
+
+
+    </script>
+  </body>
+</html>

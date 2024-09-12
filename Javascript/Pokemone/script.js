@@ -11,7 +11,7 @@ filterButton.addEventListener('click', function() {
     filterBtn.innerHTML = "Filter By Type"
 });
 
-
+// step 1
 
 async function fetchPokData(i) {
     let data =await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
@@ -20,6 +20,8 @@ async function fetchPokData(i) {
     return response;
 }
 // fetchPokData();
+
+// step 3
 
 function createCard(pokemon){
     let card = document.createElement("div");
@@ -78,6 +80,7 @@ searchInput.addEventListener("keyup",function(){
 
 })
 
+// step 2
 async function NPokemon(){
     for(let i=1; i<=100; i++){
         let pokemon = await fetchPokData(i);
