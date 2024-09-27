@@ -1,0 +1,40 @@
+.heroSub{
+    display: flex;
+    width: 95%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: 570px;
+}
+.heroSub-left{
+    width: 50%;  
+}
+.heroSub-left>img{
+    width: 100%;
+    transform: translateX(50px);
+    margin-top: 3rem;
+}
+
+.heroSub-right{
+    width: 50%;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heroSub-right-content{
+    width: 80%;
+    padding-left: 3rem;
+    color: black;
+}
+
+.heroSub-right-content>button{
+    background-color: #4F46E5;
+    color: white;
+    width: 180px;
+    border-radius: 4px;
+}
+.heroSub-right-content>button:hover{
+    color: #4F46E5;
+    background-color: white;
+}

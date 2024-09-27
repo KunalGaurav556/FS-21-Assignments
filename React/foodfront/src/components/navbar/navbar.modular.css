@@ -1,0 +1,53 @@
+/* Navbar.css */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    max-width: 1660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .navbar-container {
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: #d35207;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(2, 86, 230);
+  }
+
+  .getStarted>button{
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .getStarted>button:hover{
+    background-color: rgb(0, 0, 196);
+  }
+  
