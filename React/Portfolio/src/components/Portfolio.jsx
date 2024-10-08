@@ -62,7 +62,7 @@ function Portfolio() {
                 <div>
                 <div className="px-2 font-bold text-xl mb-2 mx-auto text-center">{name}</div>
                 <p className="px-2 text-gray-700 text-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
                 </p>
                 </div>
                 <button className="bg-green-600 hover:bg-green-800 text-white font-bold px-4 py-2 rounded my-4 ">
