@@ -1,0 +1,235 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #a8c7f5; /* Light background for clean look */
+    color: #2c3e50; /* Darker shade for body text */
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #db3434; /* Vibrant blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: yellow;
+}
+
+/* Main Layout */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Section Styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #b92929; /* Deep blue for headings */
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Dropdown and Input Styling */
+select, input[type="text"], button {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 2px solid #29a3b9;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #b92929;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2c8e1f; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+#stockSearch {
+    width: 60%;
+    padding: 10px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stock Information Section */
+.stock-info #stockDetails {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    padding: 10px;
+    line-height: 1.8;
+    border-left: 4px solid #2980b9;
+}
+
+/* Graph Section */
+.graph-section {
+    text-align: center;
+}
+
+#stockChart {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Stock Table */
+.stock-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.stock-table th, .stock-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.stock-table th {
+    background-color: #cd34db;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.stock-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.stock-table tr:hover {
+    background-color: #e3f2fd; /* Soft blue highlight on hover */
+}
+
+.stock-table td {
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    #stockSearch {
+        width: 70%;
+    }
+
+    .graph-section {
+        padding: 15px;
+    }
+
+    .stock-table th, .stock-table td {
+        padding: 12px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        display: block;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .search-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #stockSearch {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .stock-table th, .stock-table td {
+        padding: 10px;
+    }
+
+    #stockChart {
+        height: 300px;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    #stockSearch, select, button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #stockChart {
+        height: 250px;
+    }
+
+    .stock-table th, .stock-table td {
+        padding: 8px;
+    }
+}
