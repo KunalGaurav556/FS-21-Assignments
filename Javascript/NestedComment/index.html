@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Comment Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+  /* Basic styles */
+
+  body {
+    background-color: #aec0e6;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Comment section container */
+  #comment-section {
+    /* max-width: 600px; */
+    width: 100%;
+    border: 2px solid red;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(151, 197, 154);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header */
+  #comment-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  /* New comment form */
+  #new-comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  #char-counter {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  #add-comment-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #add-comment-btn:hover {
+    background-color: #2563eb;
+  }
+
+  /* Comments container */
+  #comments-container {
+    margin-top: 20px;
+  }
+  .comment-box {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+  }
+
+  .comment-text {
+    font-size: 16px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+  }
+
+  .btn.reply {
+    color: #3b82f6;
+  }
+
+  .btn.reply:hover {
+    text-decoration: underline;
+  }
+
+  .btn.edit {
+    color: #10b981;
+  }
+
+  .btn.edit:hover {
+    text-decoration: underline;
+  }
+
+  .btn.delete {
+    color: #ef4444;
+  }
+
+  .btn.delete:hover {
+    text-decoration: underline;
+  }
+
+  .reply-input {
+    margin-top: 10px;
+  }
+
+  .reply-textarea,
+  .edit-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .char-counter {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: right;
+    margin-bottom: 8px;
+  }
+
+  .reply-btn {
+    padding: 8px 16px;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .reply-btn:hover {
+    background-color: #2563eb;
+  }
+
+  .save-btn {
+    padding: 8px 16px;
+    color: white;
+    background-color: #10b981;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+  }
+
+  .save-btn:hover {
+    background-color: #059669;
+  }
+</style>
+</head>
+<body>
+    <div id="comment-section">
+      <h1 style="color: rgb(2, 47, 146);">Nested Comments</h1>
+      
+      <!-- New Comment Form -->
+      <div>
+        <textarea id="new-comment" maxlength="350" rows="5" placeholder="Add a comment..."></textarea>
+        <button id="add-comment-btn" style="background-color: red; color: yellow;">Add Comment</button>
+      </div>
+      
+      <!-- Comments Container -->
+      <div id="comments-container"></div>
+    </div>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
